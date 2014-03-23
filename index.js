@@ -1,23 +1,20 @@
-if (typeof Object.create === 'function') {
-  // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    ctor.prototype = Object.create(superCtor.prototype, {
-      constructor: {
-        value: ctor,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
+'use strict;';
+module.exports = (typeof Object.create === 'function') ? function inherits(child, parent) {
+    //use node's util.inherits method for ECMA5 compliant browsers
+    child.super_ = parent;
+    child.prototype = Object.create(parent.prototype, {
+        constructor: {
+            value: child,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
     });
-  };
-} else {
-  // old school shim for old browsers
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    var TempCtor = function () {}
-    TempCtor.prototype = superCtor.prototype
-    ctor.prototype = new TempCtor()
-    ctor.prototype.constructor = ctor
-  }
-}
+} : function inherits(child, parent) {
+    //otherwise, shim for older browsers (IE7, IE8 , FF3, etc)
+    child.super_ = parent;
+    function Temp(){}
+    Temp.prototype = parent.prototype;
+    child.prototype = new Temp();
+    child.prototype.constructor = child;
+};
