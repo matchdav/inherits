@@ -1,0 +1,22 @@
+{
+  "name": "inherits",
+  "version": "0.0.0",
+  "description": "util.inherits as a component",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matchdav/inherits.git"
+  },
+  "keywords": [
+    "inheritance"
+  ],
+  "author": "MCD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matchdav/inherits/issues"
+  },
+  "homepage": "https://github.com/matchdav/inherits"
+}
