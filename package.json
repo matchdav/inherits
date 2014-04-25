@@ -4,7 +4,7 @@
   "description": "util.inherits as a component",
   "main": "index.js",
   "scripts": {
-    "test": ".node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
