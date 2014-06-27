@@ -2,7 +2,7 @@
   "name": "inherits",
   "repo": "matchdav/inherits",
   "description": "util.inherits for component",
-  "version": "0.0.1",
+  "version": "v0.1",
   "keywords": [],
   "dependencies": {},
   "development": {},
